@@ -1,4 +1,4 @@
-package com.example.rates;
+
 import java.io.FileReader;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -144,24 +144,9 @@ public class Rates{
 	}
 	
 	/*
-	 * main method used for testing
+	 * main method used obtaining input from the user.
 	 */
 	public static void main(String args[]){
-		//Testcases
-		//String s = getRates("/Users/s_jin01/Documents/workspace/Rates/src/rates.json","2015-07-01T08:00:00Z", "2015-07-01T12:00:00Z");
-		//String s2 = getRates("/Users/s_jin01/Documents/workspace/Rates/src/rates2.json","2015-07-01T07:00:00Z","2015-07-01T12:00:00Z");
-		//String s3 = getRates("/Users/s_jin01/Documents/workspace/Rates/src/rates2.json","2015-07-04T07:00:00Z","2015-07-04T12:00:00Z");
-		//String s4 = getRates("/Users/s_jin01/Documents/workspace/Rates/src/rates3.json","2015-07-04T07:00:00Z","2015-07-04T20:00:00Z");
-		//String s5 = getRates("/Users/s_jin01/Documents/workspace/Rates/src/rates4.json","2015-07-04T07:00:00Z","2015-07-04T20:00:00Z");
-		//String s6 = getRates("/Users/s_jin01/Documents/workspace/Rates/src/rates.json","2015-07-04T07:00:00Z","2015-07-04T00:00:00Z");
-		//String s7 = getRates("/Users/s_jin01/Documents/workspace/Rates/src/rates.json","2016-03-03T07:00:00Z","2015-07-04T07:00:00Z");
-		//String s8 = getRates("/Users/s_jin01/Documents/workspace/Rates/src/rates.json","2016-03-03T09:01:00Z","2015-07-04T09:01:00Z");
-		//String s9 = getRates("/Users/s_jin01/Documents/workspace/Rates/src/rates.json","2016-03-03T09:01:00Z","2015-07-04T21:00:00Z");
-		//String s10 = getRates("/Users/s_jin01/Documents/workspace/Rates/src/rates.json","2016-03-03T09:00:00Z","2015-07-04T20:00:00Z");
-		//String s11 = getRates("/Users/s_jin01/Documents/workspace/Rates/src/rates.json","","2015-07-04T20:00:00Z");
-		//String s12 = getRates("","2016-03-03T09:00:00Z","2015-07-04T20:00:00Z");
-		//System.out.println(s7);
-		
 		System.out.println("Enter JSON filename: ");
 		Scanner s = new Scanner(System.in);
 		String file = s.nextLine();

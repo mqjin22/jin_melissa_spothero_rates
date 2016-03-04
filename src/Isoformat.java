@@ -1,4 +1,4 @@
-package com.example.rates;
+
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
