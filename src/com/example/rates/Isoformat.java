@@ -1,3 +1,4 @@
+package com.example.rates;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
@@ -44,7 +45,7 @@ public class Isoformat {
 	/*
 	 * For testing
 	 */
-	public static void main(String[] args){
+	public static void main(String args[]){
 		
 		System.out.println(getHour("2015-07-01T08:00:00Z"));
 		System.out.println(getMin("2015-07-01T08:00:00Z"));

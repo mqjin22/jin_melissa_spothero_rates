@@ -1,5 +1,7 @@
+package com.example.rates;
 import java.io.FileReader;
 import java.util.Iterator;
+import java.util.Scanner;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -44,7 +46,7 @@ public class Rates{
 			
 			JSONObject jsonObject = (JSONObject) obj;
 			JSONArray rates = (JSONArray) jsonObject.get("rates");
-			Iterator<JSONObject> iterator = rates.iterator();
+			Iterator<?> iterator = rates.iterator();
 			
 			// loop through array of rates
 			while(iterator.hasNext()){
@@ -56,7 +58,7 @@ public class Rates{
 					String currTime = (String) currRate.get("times");
 					// check if start and end are contained inside currTime
 					if(timeIsValid(start, end, currTime)){
-						String currPrice = (String) currRate.get("price").toString();
+						String currPrice = currRate.get("price").toString();
 						return currPrice;
 					}
 				}
@@ -144,7 +146,7 @@ public class Rates{
 	/*
 	 * main method used for testing
 	 */
-	public static void main(String[] args){
+	public static void main(String args[]){
 		//Testcases
 		//String s = getRates("/Users/s_jin01/Documents/workspace/Rates/src/rates.json","2015-07-01T08:00:00Z", "2015-07-01T12:00:00Z");
 		//String s2 = getRates("/Users/s_jin01/Documents/workspace/Rates/src/rates2.json","2015-07-01T07:00:00Z","2015-07-01T12:00:00Z");
@@ -159,5 +161,16 @@ public class Rates{
 		//String s11 = getRates("/Users/s_jin01/Documents/workspace/Rates/src/rates.json","","2015-07-04T20:00:00Z");
 		//String s12 = getRates("","2016-03-03T09:00:00Z","2015-07-04T20:00:00Z");
 		//System.out.println(s7);
+		
+		System.out.println("Enter JSON filename: ");
+		Scanner s = new Scanner(System.in);
+		String file = s.nextLine();
+		System.out.println("Enter start datetime in isoformat: ");
+		String start = s.nextLine();
+		System.out.println("Enter end datetime in isoformat: ");
+		String end = s.nextLine();
+		s.close();
+		String rate = getRates(file,start,end);
+		System.out.println("Your rate is: "+rate);
 	}
 }
